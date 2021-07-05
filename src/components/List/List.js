@@ -17,11 +17,13 @@ class List extends React.Component {
     return (
       <div id="List">
         <section className={styles.component}>
-          <Hero titleText={this.props.title} />
+          <Hero titleText={this.props.title} image={image} />
           <div className={styles.descrition}>
             {this.props.children}
           </div>
-          <Hero background={this.props.image} />
+          <div className={styles.columns}>Animals</div>
+          <div className={styles.columns}>Plants</div>
+          <div className={styles.columns}>Minerals</div>
         </section>  
       </div>
     )
