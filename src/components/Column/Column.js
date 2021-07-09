@@ -5,7 +5,7 @@ class Column extends React.Component {
   render() {
     return (
       <main className={styles.component}>
-        <h3 className={styles.title}>My first React app</h3>
+        <h3 className={styles.title}>{this.props.title}</h3>
       </main>
     )
   }
