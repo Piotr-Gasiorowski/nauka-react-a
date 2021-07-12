@@ -33,15 +33,15 @@ class Column extends React.Component {
           </span>
         </h3>
         <div className={styles.columns}>
-          {this.state.cards.map(({key, ...cardProps}) => (
-            <Card key={key} {...cardProps} />
+          {cards.map (cardData => (
+            <Card key={cardData.id} {...cardData} />
           ))}
         </div>
         <div className={styles.creator}>
-            <Creator text={settings.cardCreatorText} action={title => this.addCard(title)} />
-          </div>
+          <Creator text={settings.cardCreatorText} action={addCard} />
+        </div>
       </section>
-    )
+    );
   }
 }
 
