@@ -30,9 +30,9 @@ class List extends React.Component {
             key: state.columns.lenght ? state.columns[state.columns.lenght-1].key+1 : 0,
             title,
             icon: 'list-alt',
-            cards: []
-          }
-        ]
+            cards: [],
+          },
+        ],
       }
     ));
   }
@@ -55,7 +55,7 @@ class List extends React.Component {
           </div>
         </section>  
       </div>
-    )
+    );
   }
 }
 
