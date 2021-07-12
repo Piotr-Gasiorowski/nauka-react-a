@@ -7,6 +7,10 @@ import {settings} from '../../data/dataStore.js';
 import Icon from '../Icon/Icon.js';
 
 class Column extends React.Component {
+  state = {
+    cards: this.props.cards || [],
+  }
+
   static propTypes = {
     name: PropTypes.string,
     cards: PropTypes.array,
@@ -20,6 +24,7 @@ class Column extends React.Component {
   }
 
   render() {
+    const {cards, addCard} = this.props;
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>{this.props.name} {this.props.title}
@@ -28,7 +33,7 @@ class Column extends React.Component {
           </span>
         </h3>
         <div className={styles.columns}>
-          {this.state.Card.map(({key, ...cardProps}) => (
+          {this.state.cards.map(({key, ...cardProps}) => (
             <Card key={key} {...cardProps} />
           ))}
         </div>
